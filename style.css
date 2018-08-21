@@ -1,0 +1,63 @@
+/*===== Reset =====*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 100%;
+	font-family: sans-serif;
+	font-weight: 300;	
+	border: none;
+	outline: none;
+}
+
+
+/*===== Cabecalho =====*/
+.cabecalho {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	background-color: #40104F;
+	color: #fff;
+}
+
+.cabecalho h1 {
+	font-size: 2rem;
+}
+/*===== container =====*/
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+/*===== Entrada =====*/
+	input {
+		width: 80%;
+		max-width: 400px;
+		padding: 5px;
+		margin-top: 20px;
+		border-bottom: 1px solid #A4A4A4;
+	}
+
+	input:focus {
+		border-bottom: 1px solid #F90D74;
+	}
+
+/*===== Botão =====*/
+.btn {
+	margin-top: 20px;
+	padding: 10px;
+	border: 1px solid #A4A4A4;
+	color: #A4A4A4;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.btn:hover {
+	color: #F90D74;
+	border: 1px solid #F90D74;
+}

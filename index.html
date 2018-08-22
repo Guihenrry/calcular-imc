@@ -15,8 +15,41 @@
 	<div class="container">
 		<input type="number" placeholder="Peso kg" class="peso">
 		<input type="number" placeholder="Altura m" class="altura">
-		<button class="btn">Calcular</button>
-		<div class="resultado"></div>
+		<button class="btn" onclick="calcularIMC()">Calcular</button>
+		<div class="resultado">
+			<h2 class="imc"></h2>
+			<p class="situacao"></p>
+		</div>
 	</div>
+	<!-- Javascript -->
+	<script>
+		function calcularIMC(){
+			// pegar os valores de entrada
+			var peso = document.querySelector('.peso').value,
+				altura = document.querySelector('.altura').value;
+			// fazer o procesamento utilizando a formula
+			var imc = peso / (altura * altura);
+			// mostrar o resultado do imc
+			var telaIMC = document.querySelector('.imc');
+			telaIMC.innerHTML = imc.toFixed(1);
+			// mostrar texto com a situacao do imc
+			var situacao = document.querySelector('.situacao');
+			if (imc < 18.5) {
+				situacao.innerHTML = 'abaixo do peso';
+			} else if (imc >= 18.5 && imc < 25) {
+				situacao.innerHTML = 'Peso ideal';
+			} else if (imc >= 25 && imc < 30) {
+				situacao.innerHTML = 'Levemente acima do peso';
+			} else if (imc >= 30 && imc < 35) {
+				situacao.innerHTML = 'Obesidade grau I';
+			} else if (imc >= 35 && imc < 40) {
+				situacao.innerHTML = 'Obesidade grau II (severa)';
+			} else if (imc >= 40) {
+				situacao.innerHTML = 'Obesidade grau III (mórbida)';
+			}
+
+
+		}
+	</script>
 </body>
 </html>
